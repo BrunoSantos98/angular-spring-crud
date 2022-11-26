@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
 import { Course } from '../models/course';
 import { CoursesService } from '../services/courses.service';
+import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-courses',
@@ -9,15 +12,25 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CoursesComponent {
 
-  courses:Course[] = [];
+  courses$: Observable<Course[]>;
   displayedColumns = ['name','category'];
 
-  coursesService: CoursesService;
+  constructor(private coursesService: CoursesService, public dialog: MatDialog){
 
-  constructor(){
+    this.courses$ = this.coursesService.list()
+    .pipe(
+      catchError(error => {
+        this.onError("erro ao carregar cursos.")
+        return of([])
+      })
+    );
+  }
 
-    this.coursesService = new CoursesService();
-    this.courses = this.coursesService.list();
+  onError(errorMsg:string){
+
+    this.dialog.open(ErrorDialogComponent, {
+      data:errorMsg
+    });
   }
 
 }
