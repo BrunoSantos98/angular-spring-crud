@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
-## Development server
+> ℹ️ Detalhes: Parte Front-end de uma aplicação full stack sendo desenvolvida para portfolio. Você pode encontrar o Back-End [**Clicando Aqui**](https://github.com/BrunoSantos98/angular-spring-crud-back-end-). A parte do Front end da aplicação é uma lista de cursos construida em AngularJs + Angular material com objetivo de utilizar a API CRUD do Back-End para atualizar as informações de cursos no Front-end.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 💻 Pré Requisitos 💻:
 
-## Code scaffolding
+- Sistema operacional: Qualquer Distribuição Linux, Windows e Mac OS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Instalação: é necessario ter o Angular cli instalado na sua maquina, Node.Js e NPM
 
-## Build
+## ⚠️ Atenção ⚠️:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Para um melhor funcionamento do seu sistema você deve ter a parte do back end instalada e rodando no seu computador, caso você tenha um ja instalado com informações diferentes, você deve fazer as alterações no projeto do front para poder funcionar normalmente sua aplicação.
 
-## Running unit tests
+## 📃 Como usar:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  1. Faça o clone do projeto
 
-## Running end-to-end tests
+  2. abra na sua IDE ou editor de preferencia
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  3. Teste como quiser.
