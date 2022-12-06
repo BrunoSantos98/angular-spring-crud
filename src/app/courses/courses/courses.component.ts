@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { catchError, Observable, of } from 'rxjs';
 import { Course } from '../models/course';
@@ -14,7 +14,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CoursesComponent {
 
   courses$: Observable<Course[]>;
-  displayedColumns = ['name','category','actions'];
 
   constructor(
     private coursesService: CoursesService,
@@ -39,8 +38,10 @@ export class CoursesComponent {
     });
   }
 
-  onAdd(){
-    this.router.navigate(['new'],{relativeTo: this.route})
+
+
+  onEdit(course:Course){
+    this.router.navigate(['edit',course._id],{relativeTo: this.route})
   }
 
 }
